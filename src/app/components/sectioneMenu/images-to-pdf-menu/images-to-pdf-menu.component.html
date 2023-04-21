@@ -1,1 +1,10 @@
-<p>images-to-pdf-menu works!</p>
+<div class="menuContainer">
+    <div class="menuContainer__ButtonContainer">
+        <div class="menuContainer__ButtonContainer--button" *ngFor="let iconPath of buttonsIconPath; let i = index">
+            <img class="menuContainer__ButtonContainer__outputPathButton--icon" src="{{iconPath}}" style="object-fit: conver;">
+            <div class="menuContainer__ButtonContainer__outputPathButton--label">{{buttonsLabel[i]}}</div>
+        </div>
+    </div>
+    <div class="menuContainer__inputVisualizer">show</div>
+    <div class="menuContainer__convertButton">exec</div>
+</div>

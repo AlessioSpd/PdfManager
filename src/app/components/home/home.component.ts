@@ -14,7 +14,9 @@ export class HomeComponent implements OnInit{
   buttonsNameShort = ['P2I', 'I2P', 'MP'];
   currentNames = this.buttonsName;
 
-  menuSwitcher = 'landed';
+  buttonActivated = [false,false,false];
+
+  menuSwitcher = 0;
 
   ngOnInit() {
     this.currentNames = this.buttonsName;
@@ -24,7 +26,13 @@ export class HomeComponent implements OnInit{
   onResize() {
     this.w = window.innerWidth;
     this.h = window.innerHeight;
-    if(this.w <= 750) this.currentNames = this.buttonsNameShort;
+    if(this.w <= 810) this.currentNames = this.buttonsNameShort;
     else this.currentNames = this.buttonsName;
+  }
+
+  activeMe(index: number){
+    this.buttonActivated = [false];
+    this.buttonActivated[index] = true;
+    this.menuSwitcher = index+1;
   }
 }
