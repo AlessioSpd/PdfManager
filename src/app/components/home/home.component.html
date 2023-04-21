@@ -1,0 +1,18 @@
+<div class="navBarContainer">
+    <div class="navBarContainer__logoContainer">
+        <div class="navBarContainer__logoContainer--logo"></div>
+    </div>
+    <div class="navBarContainer__buttonMenuContainer">
+        <div class="navBarContainer__buttonMenuContainer--button" *ngFor="let button of currentNames">{{button}}</div>
+    </div>
+    <div class="navBarContainer__footerContainer">
+        <div class="navBarContainer__footerContainer__settingButton">Setting</div>
+        <div class="navBarContainer__footerContainer__infoButton">Info</div>
+    </div>
+</div>
+<div class="menuPageContainer" [ngSwitch]="menuSwitcher">
+    <app-landend-menu *ngSwitchCase='"landed"'></app-landend-menu>
+    <app-pdf-to-images-menu *ngSwitchCase='"p2i"'></app-pdf-to-images-menu>
+    <app-images-to-pdf-menu *ngSwitchCase='"i2p"'></app-images-to-pdf-menu>
+    <app-manage-pdf-menu *ngSwitchCase='"mp"'></app-manage-pdf-menu>
+</div>
