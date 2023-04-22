@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit{
 
   buttonActivated = [false,false,false];
 
-  menuSwitcher = 0;
+  menuSwitcher = 2;
 
   ngOnInit() {
     this.currentNames = this.buttonsName;

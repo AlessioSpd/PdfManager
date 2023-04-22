@@ -10,12 +10,11 @@
                 [ngClass]="{'button_pressed': buttonActivated[i], 'button_unpressed': !buttonActivated[i]}"
             >{{button}}</div>
         </div>
-        <div class="navBarContainer__buttonMenuContainer__bottomButton"></div>
+        <div class="navBarContainer__buttonMenuContainer__bottomButton">
+            <div class="navBarContainer__buttonMenuContainer__bottomButton--button">Setting</div>
+            <div class="navBarContainer__buttonMenuContainer__bottomButton--button">Info</div>
+        </div>
     </div>
-    <!-- <div class="navBarContainer__footerContainer">
-        <div class="navBarContainer__footerContainer__settingButton">Setting</div>
-        <div class="navBarContainer__footerContainer__infoButton">Info</div>
-    </div> -->
 </div>
 <div class="menuPageContainer" [ngSwitch]="menuSwitcher">
     <app-landend-menu *ngSwitchCase='0'></app-landend-menu>

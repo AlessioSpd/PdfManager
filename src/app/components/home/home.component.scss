@@ -60,7 +60,28 @@
         &__bottomButton {
             width: 100%;
             height: 25%;
-            // background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            min-height: 100px;
+
+            &--button {
+                width: 80%;
+                height: 30px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;
+                transition: box-shadow .1s ease-in-out;
+            }
+
+            &--button:active {
+                box-shadow:  0px 0px 0px #b4b4b4, -0px 0px 0px #f4f4f4, inset 3px 3px 6px #b4b4b4, inset -3px -3px 6px #f4f4f4;
+            }
         }
     }
 
@@ -107,14 +128,4 @@
     .navBarContainer__buttonMenuContainer--button {
         justify-content: center;
     }
-}
-
-.button_unpressed {
-    box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;
-    transition: box-shadow .2s ease-in-out;
-}
-
-.button_pressed {
-    transition: box-shadow .2s ease-in-out;
-    box-shadow:  0px 0px 0px #b4b4b4, -0px 0px 0px #f4f4f4, inset 3px 3px 6px #b4b4b4, inset -3px -3px 6px #f4f4f4;
 }

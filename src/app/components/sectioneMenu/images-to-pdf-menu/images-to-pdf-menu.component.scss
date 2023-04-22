@@ -1,3 +1,5 @@
+@import '../../../../assets/style/style.const.scss';
+
 .menuContainer {
     width: 100%;
     height: 100%;
@@ -8,37 +10,37 @@
 
     & > div {
         width: 100%;
-        border: solid 1px black;
     }
 
     &__ButtonContainer {
-        flex: 3;
+        flex: 1;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 40px;
+        gap: 25px;
+        background-color: coral;
         
         & > div {
             width: 150px;
-            height: 150px;
-            border: solid 1px black;
+            height: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: $main_background-color;
+            border-radius: 15px;
         }
 
-        &--button > img {
-            width: 100%;
-            height: 80%;
-            object-fit: contain;
+        &--button {
+            box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;
+            transition: box-shadow .2s ease-in-out;
         }
-    }
 
-    &__inputVisualizer {
-        flex: 2;
-    }
-
-    &__convertButton {
-        flex: 1;
+        &--button:active {
+            box-shadow:  0px 0px 0px #b4b4b4, -0px 0px 0px #f4f4f4, inset 3px 3px 6px #b4b4b4, inset -3px -3px 6px #f4f4f4;
+        }
     }
 }

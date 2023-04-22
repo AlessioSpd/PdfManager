@@ -1,1 +1,11 @@
 $main_background-color: #d4d4d4;
+
+.button_unpressed {
+    box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;
+    transition: box-shadow .2s ease-in-out;
+}
+
+.button_pressed {
+    transition: box-shadow .2s ease-in-out;
+    box-shadow:  0px 0px 0px #b4b4b4, -0px 0px 0px #f4f4f4, inset 3px 3px 6px #b4b4b4, inset -3px -3px 6px #f4f4f4;
+}
