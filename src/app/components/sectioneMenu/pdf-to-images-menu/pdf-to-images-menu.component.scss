@@ -1,0 +1,23 @@
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__testButton {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        animation: pop_up 2s forwards;
+        animation-delay: .2s;
+    }
+}
+
+@keyframes pop_up {
+    from {}
+    to {box-shadow:  22px 22px 50px #8f8f8f,-22px -22px 50px #ffffff;}
+}

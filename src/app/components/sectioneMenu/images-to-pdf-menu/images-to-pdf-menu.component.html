@@ -1,7 +1,9 @@
 <div class="menuContainer">
-    <div class="menuContainer__ButtonContainer">
-        <div class="menuContainer__ButtonContainer--button" *ngFor="let label of buttonsLabel">
-            <div class="menuContainer__ButtonContainer__outputPathButton--label">{{label}}</div>
-        </div>
+    <div class="menuContainer__buttonContainer" *ngFor="let label of buttonsLabel">
+        <div class="menuContainer__buttonContainer--button">{{label}}</div>
+        <div class="menuContainer__buttonContainer--label"><label id="pathLabel"></label></div>
+    </div>
+    <div class="menuContainer__buttonContainer">
+        <div class="menuContainer__buttonContainer--convertButton">convert</div>
     </div>
 </div>

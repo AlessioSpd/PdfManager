@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class ImagesToPdfMenuComponent {
 
   buttonsLabel = [
-    'Input Folder',
-    'Output Folder',
-    'Filter'
+    'Select Input Folder',
+    'Select output Folder',
+    'Select Filter',
   ];
 
   convert(){

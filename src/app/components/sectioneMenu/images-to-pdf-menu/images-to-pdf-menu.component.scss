@@ -5,42 +5,83 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
 
-    & > div {
-        width: 100%;
-    }
-
-    &__ButtonContainer {
-        flex: 1;
+    &__buttonContainer {
+        width: 80%;
+        height: 60px;
         display: flex;
         align-items: center;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        margin-left: 40px;
-        gap: 25px;
-        background-color: coral;
-        
-        & > div {
-            width: 150px;
-            height: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: $main_background-color;
-            border-radius: 15px;
+        gap: 15px;
+
+        &:nth-last-child(1){
+            margin-top: 30px;
         }
 
         &--button {
-            box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;
-            transition: box-shadow .2s ease-in-out;
+            width: 200px;
+            height: 45px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+            animation: pop_up 1s forwards;
+            animation-delay: .5s;
+            
+            &:active {
+                animation: pop_down .5s forwards;
+            }
         }
 
-        &--button:active {
-            box-shadow:  0px 0px 0px #b4b4b4, -0px 0px 0px #f4f4f4, inset 3px 3px 6px #b4b4b4, inset -3px -3px 6px #f4f4f4;
+        &--label {
+            width: 60%;
+            height: 45px;
+            border-radius: px;
+            display: flex;
+            align-items: center;
+            border-radius: 15px;
+            justify-content: flex-start;
+            overflow: hidden;
+            animation: pop_down 2s forwards;
+            animation-delay: .5s;
+
+            & > label {
+                margin-left: 15px;
+            }
+        }
+
+        &--convertButton {
+            width: 100%;
+            height: 80%;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: box-shadow .1s ease-in-out;
+            box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;
+            
+            &:active {
+               animation: clicked 1s forwards;
+            }
         }
     }
+}
+
+@keyframes pop_down {
+    from {}
+    to {box-shadow: inset 4px 4px 8px #a1a1a1, inset -4px -4px 8px #ffffff;}
+}
+
+@keyframes pop_up {
+    from {}
+    to {box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;}
+}
+
+@keyframes clicked {
+    0%   { box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4; }
+    50%  {box-shadow:  0px 0px 0px #b4b4b4, -0px 0px 0px #f4f4f4, inset 3px 3px 6px #b4b4b4, inset -3px -3px 6px #f4f4f4; }
+    100% {box-shadow:  4px 4px 8px #b4b4b4, -4px -4px 8px #f4f4f4, inset 0px 0px 0px #b4b4b4, inset 0px 0px 0px #f4f4f4;}
 }
