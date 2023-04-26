@@ -1,4 +1,4 @@
-# PdfManager
+# PdfManager (in progress)
 Il progetto è stato pensato principalmente per consolidare e apprendere abilità nello sviluppo delle seguenti tecnologie
 -  [Angular](https://angular.io/)
 - [Electron](https://www.electronjs.org/)
